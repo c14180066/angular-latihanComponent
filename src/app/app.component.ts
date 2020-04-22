@@ -9,15 +9,15 @@ import { Route } from '@angular/compiler/src/core';
 })
 export class AppComponent  {
   name = 'Angular';
-  constructor(private router : Router){}
+  constructor(private route : Router){}
   input(){
-    this.router.navigate(['/halaman-input']);
+    this.route.navigate(['/halaman-input']);
   }
   list(){
-    this.router.navigate(['/halaman-list']);
+    this.route.navigate(['/halaman-list']);
   }
   edit(){
-    this.router.navigate(['/halaman-edit']);
+    this.route.navigate(['/halaman-edit']);
   }
   a = '';
   b = '';
