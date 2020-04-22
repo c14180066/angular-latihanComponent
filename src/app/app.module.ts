@@ -11,9 +11,9 @@ import { HalamanEditComponent } from './halaman-edit/halaman-edit.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const ROUTES: Routes=[
-  {path:'input', component: HalamanInputComponent},
-  {path:'list', component: HalamanListComponent},
-  {path:'edit', component: HalamanEditComponent}
+  {path:'halaman-input', component: HalamanInputComponent},
+  {path:'halaman-list', component: HalamanListComponent},
+  {path:'halaman-edit', component: HalamanEditComponent}
 ] 
 
 @NgModule({

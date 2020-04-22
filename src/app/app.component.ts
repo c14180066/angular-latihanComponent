@@ -11,13 +11,13 @@ export class AppComponent  {
   name = 'Angular';
   constructor(private router : Router){}
   input(){
-    this.router.navigate(['/input']);
+    this.router.navigate(['/halaman-input']);
   }
   list(){
-    this.router.navigate(['/list']);
+    this.router.navigate(['/halaman-list']);
   }
   edit(){
-    this.router.navigate(['edit']);
+    this.router.navigate(['/halaman-edit']);
   }
   a = '';
   b = '';
