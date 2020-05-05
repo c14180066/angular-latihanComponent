@@ -9,11 +9,9 @@ import { GlobalService } from '../global.service';
 export class HalamanListComponent implements OnInit {
 
   arrTemp1 = [];
-  arrTemp2 = [];
 
   constructor(public varglob : GlobalService) { 
-    this.arrTemp1 = this.varglob.getDataNamaJur();
-    this.arrTemp2 = this.varglob.getDataDetailJur();
+    this.arrTemp1 = this.varglob.getDataJur();
   }
 
   ngOnInit() {

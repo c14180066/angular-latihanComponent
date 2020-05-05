@@ -11,20 +11,17 @@ export class HalamanEditComponent implements OnInit {
   a = '';
   b = '';
   arrTemp1 = [];
-  arrTemp2 = [];
   constructor(public varglob : GlobalService) {
-      this.arrTemp1 = this.varglob.getDataNamaJur();
-      this.arrTemp2 = this.varglob.getDataDetailJur();
+      this.arrTemp1 = this.varglob.getDataJur();
    }
 
   edit(){
     for (var i = 0;i < this.arrTemp1.length; i++){
-      if (this.arrTemp1[i] == this.a){
-          this.arrTemp2[i] = this.b;
+      if (this.arrTemp1[i].nama == this.a){
+        this.arrTemp1[i].detail = this.b;
       }
     }
-    this.varglob.setDataNamaJur(this.arrTemp1);
-    this.varglob.setDataDetailJur(this.arrTemp2);
+    this.varglob.setDataJur(this.arrTemp1);
   }
 
   ngOnInit() {
