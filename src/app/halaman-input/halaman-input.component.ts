@@ -10,13 +10,17 @@ export class HalamanInputComponent implements OnInit {
 
   a = '';
   b = '';
+  data : any;
 
   constructor(public varglob : GlobalService) { 
 
   }
   submit(data1, data2){
-    this.varglob.pushDataNamaJur(this.a);
-    this.varglob.pushDataDetailJur(this.b);
+    this.data ={
+      nama : this.a,
+      detail : this.b
+    }
+    this.varglob.pushDataJur(this.data);
   }
 
   ngOnInit() {
