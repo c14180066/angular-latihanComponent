@@ -18,12 +18,17 @@ export class GlobalService {
     this.arrDetailJur.push(data1);
     this.countArrDJ += 1;
   }
-
   public getDataNamaJur(){
     return this.arrNamaJur;
   }
 
   public getDataDetailJur(){
     return this.arrDetailJur;
+  }
+  public setDataNamaJur(dataArray){
+    this.arrNamaJur = dataArray;
+  }
+  public setDataDetailJur(dataArray){
+    this.arrDetailJur = dataArray;
   }
 }

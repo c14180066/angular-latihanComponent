@@ -8,13 +8,23 @@ import { GlobalService } from '../global.service';
 })
 export class HalamanEditComponent implements OnInit {
 
-  a = ' ';
+  a = '';
+  b = '';
+  arrTemp1 = [];
+  arrTemp2 = [];
+  constructor(public varglob : GlobalService) {
+      this.arrTemp1 = this.varglob.getDataNamaJur();
+      this.arrTemp2 = this.varglob.getDataDetailJur();
+   }
 
-  constructor(public varglob : GlobalService) { }
-
-  edit(data1){
-    
-
+  edit(){
+    for (var i = 0;i < this.arrTemp1.length; i++){
+      if (this.arrTemp1[i] == this.a){
+          this.arrTemp2[i] = this.b;
+      }
+    }
+    this.varglob.setDataNamaJur(this.arrTemp1);
+    this.varglob.setDataDetailJur(this.arrTemp2);
   }
 
   ngOnInit() {
