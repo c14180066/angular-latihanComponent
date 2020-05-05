@@ -9,6 +9,7 @@ import { HalamanListComponent } from './halaman-list/halaman-list.component';
 import { HalamanEditComponent } from './halaman-edit/halaman-edit.component';
 
 import { Routes, RouterModule } from '@angular/router';
+import { GlobalService } from './global.service';
 
 const ROUTES: Routes=[
   {path:'halaman-input', component: HalamanInputComponent},
@@ -23,6 +24,7 @@ const ROUTES: Routes=[
     RouterModule.forRoot(ROUTES)
   ],
   declarations: [ AppComponent, HelloComponent, HalamanInputComponent, HalamanListComponent, HalamanEditComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [GlobalService]
 })
 export class AppModule { }

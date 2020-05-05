@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-halaman-input',
@@ -7,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HalamanInputComponent implements OnInit {
 
-  constructor() { }
-  
+  a = '';
+  b = '';
+
+  constructor(public varglob : GlobalService) { 
+
+  }
+  submit(data1, data2){
+    this.varglob.pushDataNamaJur(this.a);
+    this.varglob.pushDataDetailJur(this.b);
+  }
 
   ngOnInit() {
   }

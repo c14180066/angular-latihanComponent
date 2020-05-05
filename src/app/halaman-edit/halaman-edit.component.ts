@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-halaman-edit',
@@ -8,7 +8,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HalamanEditComponent implements OnInit {
 
-  constructor(private route : ActivatedRoute) { }
+  a = ' ';
+
+  constructor(public varglob : GlobalService) { }
+
+  edit(data1){
+    
+
+  }
 
   ngOnInit() {
   }

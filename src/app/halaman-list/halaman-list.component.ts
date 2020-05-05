@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-halaman-list',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HalamanListComponent implements OnInit {
 
-  constructor() { }
+  arrTemp1 = [];
+  arrTemp2 = [];
+
+  constructor(public varglob : GlobalService) { 
+    this.arrTemp1 = this.varglob.getDataNamaJur();
+    this.arrTemp2 = this.varglob.getDataDetailJur();
+  }
 
   ngOnInit() {
+
   }
 
 }
